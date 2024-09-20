@@ -8,6 +8,12 @@ https://github.com/scratchfoundation/scratch-blocks/wiki#building
 
 ![](md-imgs/2024-09-20-14-23-50.png)
 
+# 💻 克隆 scratch-blocks
+
+```git
+git clone https://github.com/scratchfoundation/scratch-blocks.git
+```
+
 # 💻 编译流程
 
 正常情况下，当我们执行 `npm i` 的时候，在安装依赖的同时，就会完成编译，并在项目根目录生成以下编译产物。
@@ -45,6 +51,7 @@ $ npm i
 
 ```py
 # 修改之前
+# https://github.com/scratchfoundation/scratch-blocks/blob/develop/build.py#L316
   def do_compile_local(self, params, target_filename):
       filter_keys = ["use_closure_library"]
 
@@ -118,6 +125,10 @@ $ npm i
       )
 ```
 
+主要修改的内容：
+
+![](md-imgs/2024-09-20-15-26-44.png)
+
 这时候再去执行 `npm run py` 会发现就不再报错了。
 
 ![](md-imgs/2024-09-20-14-54-30.png)
@@ -125,3 +136,9 @@ $ npm i
 并且 `blockly_compressed_vertical.js`、`blockly_compressed_horizontal.js` 这两个核心文件也都生成了。
 
 ![](md-imgs/2024-09-20-14-53-33.png)
+
+# 🤔 问：如何判断 build.py 是否成功工作？
+
+可以通过 `npm run py` 命令来运行 build.py 脚本，如果成功生成了这些 JS 模块，那么意味着 build.py 成功执行了。
+
+![](md-imgs/2024-09-20-14-57-16.png)
