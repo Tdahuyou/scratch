@@ -1,4 +1,4 @@
-## 🤖 ai - Closure Library 是什么？
+## 🤖 AI - Closure Library 是什么？
 
 Closure Library 是一个由 Google 开发的强大的 JavaScript 库，它提供了大量经过严格测试、文档齐全且结构良好的模块化代码。Closure Library 的设计目标是帮助开发者构建复杂和大规模的 Web 应用程序。以下是 Closure Library 的一些关键特点：
 
